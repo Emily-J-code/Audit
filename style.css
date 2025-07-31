@@ -1,0 +1,37 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Linking my logo font from Google Fonts*/
+.playwrite-it-moderna-logo {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/*background gradients and texture styles*/
+html {
+  background: linear-gradient(9deg, #AFDCE0, #e7fdff);
+  position: relative;
+  font-family: "air-travelers-font";
+}
+
+/*styling website header*/
+header{
+    font-family: "Playwrite IT Moderna", cursive;
+    text-align: center;
+}
+
+/*styling website logo*/
+#logo{
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+/*styling website description*/
+#websiteDescription{
+    margin-top: 10px;
+    font-size: 5px;
+}
