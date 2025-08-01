@@ -11,7 +11,7 @@
   font-style: normal;
 }
 
-/*background gradients and texture styles*/
+/*UPDATE THIS LATER: background gradients and texture styles*/
 html {
   background: linear-gradient(9deg, #AFDCE0, #e7fdff);
   position: relative;
@@ -32,6 +32,38 @@ header{
 
 /*styling website description*/
 #websiteDescription{
-    margin-top: 10px;
-    font-size: 5px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+/*nav bar gray background styling*/
+#navBackground{
+    margin: 30px;
+    padding: 5px;
+    background-color: hsl(292deg 84% 5% / 50%);
+    border-radius: .5rem;
+}
+/*nav bar links styling*/
+nav{
+    list-style-type: none;
+    padding: 20px;
+    font-size: 15px;
+    font-family: "Playwrite IT Moderna", cursive;
+    background-color: #AFDCE0;
+    overflow: none;
+    text-align: center;
+    justify-content: space-between;
+}
+li {
+  display: inline; /*puts list into a row*/
+}
+li a {
+  text-decoration: none; /*gets rid of the underlines*/
+  color:black;
+  font-size: 1.3em;
+  margin-left: 3em;
+  
+}
+li a:hover {
+  color: white;
 }
