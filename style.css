@@ -18,26 +18,26 @@ html {
   font-family: "air-travelers-font";
 }
 
-/*styling website header*/
+/*styling website header -> renamed headers class*/
 header{
     font-family: "Playwrite IT Moderna", cursive;
     text-align: center;
 }
 
 /*styling website logo*/
-#logo{
+.logo{
     margin-top: 20px;
     letter-spacing: 5px;
 }
 
 /*styling website description*/
-#websiteDescription{
+.websiteDescription{
     margin: 10px;
     font-size: 15px;
 }
 
 /*nav bar gray background styling*/
-#navBackground{
+.navBackground{
     margin: 30px;
     padding: 5px;
     background-color: hsl(292deg 84% 5% / 50%);
@@ -66,4 +66,14 @@ li a {
 }
 li a:hover {
   color: white;
+}
+
+
+/*creating log audit page*/
+/* logging an audit tyles */
+.tileBackground{
+    background-color: palegoldenrod;
+    padding: 20px;
+    margin: 20px;
+    
 }
