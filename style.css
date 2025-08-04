@@ -13,7 +13,10 @@
 
 /*UPDATE THIS LATER: background gradients and texture styles*/
 html {
-  background: linear-gradient(9deg, #AFDCE0, #e7fdff);
+  background-color: #AFDCE0;
+  opacity: 0.8;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #AFDCE0 25px ), repeating-linear-gradient( #e7fdff55, #e7fdff );
+  /*background: linear-gradient(9deg, #AFDCE0, #e7fdff);*/
   position: relative;
   font-family: "air-travelers-font";
 }
@@ -72,8 +75,17 @@ li a:hover {
 /*creating log audit page*/
 /* logging an audit tyles */
 .tileBackground{
+    display: block;
     background-color: palegoldenrod;
     padding: 20px;
     margin: 20px;
     
+    
+}
+
+/*text inputs and image input aligning horizontally*/
+.tileBackground{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
