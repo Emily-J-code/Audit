@@ -83,3 +83,23 @@ li a:hover {
     align-items: center;
     padding: 30px;
 }
+/*creating button for submitting audit*/
+.submitButton{
+  font-family: "Playwrite IT Moderna", cursive;
+  background-color: #93db27;
+  padding: 20px;
+}
+
+.newAuditButton{
+  font-family: "Playwrite IT Moderna", cursive;
+  background-color: yellow;
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.deleteButton{
+  font-family: "Playwrite IT Moderna", cursive;
+  background-color: red;
+  padding: 20px;
+}
