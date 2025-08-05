@@ -75,17 +75,11 @@ li a:hover {
 /*creating log audit page*/
 /* logging an audit tyles */
 .tileBackground{
-    display: block;
+    font-family: "Playwrite IT Moderna", cursive;
     background-color: palegoldenrod;
-    padding: 20px;
-    margin: 20px;
-    
-    
-}
-
-/*text inputs and image input aligning horizontally*/
-.tileBackground{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    padding: 30px;
 }
