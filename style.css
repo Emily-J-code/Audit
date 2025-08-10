@@ -103,3 +103,10 @@ li a:hover {
   background-color: red;
   padding: 20px;
 }
+
+/*styling textfields that replace user inputs*/
+.textFields{
+  color: blue;
+  text-border: red;
+  
+}
