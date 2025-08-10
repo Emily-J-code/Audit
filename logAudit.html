@@ -54,8 +54,10 @@
                     <div>
                     <p>Allergen: </p>
                     <form>
-                        <input type="text" name="allergen" placeholder="Type here...">
+                        <!--learned that instead of name=, should be doing value= in order to use .value property-->
+                        <input type="text" id="allergenInput" placeholder="Type here...">
                     </form>
+                        <p id="allergenReplacement" style= "visibility: hidden;"> placeholderText</p>
                     </div>
                     <div>
                     <p>Product Name: </p>
