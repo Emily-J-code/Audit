@@ -104,9 +104,19 @@ li a:hover {
   padding: 20px;
 }
 
+.prompt{
+  margin-top: 30px;
+}
+
+.surroundingDiv{
+
+  background-color: white;
+  padding-left: 10px;
+  border-radius: 10px;
+}
 /*styling textfields that replace user inputs*/
 .textFields{
   color: blue;
-  text-border: red;
+  
   
 }
