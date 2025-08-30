@@ -80,6 +80,11 @@ li a:hover {
   align-items: center;
 }
 
+#innerDiv{
+  display: flex;
+  flex-direction: column;
+}
+
 #tileBackground{
     font-family: "Playwrite IT Moderna", cursive;
     background-color: palegoldenrod;

@@ -1,8 +1,6 @@
 const submitButton = document.querySelector(".submitButton");
 const deleteButton = document.querySelector(".deleteButton");
 const newAuditButton = document.querySelector("#newAuditButton")
-const auditTemplate = document.querySelector("#auditTemplates");
-const duplicateTemplate = auditTemplate.content.cloneNode(true);
 var allergen = "";
 var product = "";
 var business = "";
@@ -76,5 +74,8 @@ function deleteAudit(){
 newAuditButton.addEventListener("click", addAudit);
 //create a new audit by adding an identical template
 function addAudit(){
-    document.getElementById("tileBackground").appendChild(duplicateTemplate);
+    const auditTemplate = document.querySelector("#auditTemplates");
+    const duplicateTemplate = auditTemplate.content.cloneNode(true);
+    document.getElementById("innerDiv").appendChild(duplicateTemplate);
+
 }
