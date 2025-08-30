@@ -46,11 +46,11 @@
 
         <!--MAIN-->
         <main>
-            <div id="bigDiv">
             <!--Audit 1, with 5 input fields that should be aligned so that 4 text inputs on left and 1 img input on right-->
             <!--Style so that the background is felt or textured. Replace "Audit 1" with Audit + var name that increases every time a new audit is made-->
             <div id="tileBackground">
             <!--Original, not template-->
+                <div id="innerDiv">
                 <h1>Audit 1</h1>
                 <div class="textInputs">
                     <div class = "surroundingDiv">
@@ -85,11 +85,21 @@
                     </form>
                     <p id="dateReplacement" style="visibility: hidden;" class = "textFields"> placeholderText</p>
                     </div>
+
+                    <div class="imageInput">
+                    <p>Take a pic of the product and upload it here: </p>
+                    <form>
+                        <input type="image" id="productImg" placeholder="Take a pic of the product and upload it here!">
+                        <img class="imageReplacement"></img>
+                    </form>
+                </div>
+
+            <button class="submitButton" type="submit">DONE</button>
+            <button class="deleteButton" type="button">DELETE</button>
                     
                 </div>
             <!--Template-->
             </template>
-            <div id="tileBackground">
                 <template id="auditTemplates">
                 <h1>Audit 1</h1>
                 <div class="textInputs">
@@ -126,9 +136,7 @@
                     <p id="dateReplacement" style="visibility: hidden;" class = "textFields"> placeholderText</p>
                     </div>
                     
-                </div>
-            </template>
-            </div>
+        
                 
                 <div class="imageInput">
                     <p>Take a pic of the product and upload it here: </p>
@@ -140,7 +148,11 @@
 
             <button class="submitButton" type="submit">DONE</button>
             <button class="deleteButton" type="button">DELETE</button>
+            </template>
             </div>
+            </div>
+
+
             
             <button id="newAuditButton" type="button">NEW AUDIT</button>
         </main>            
