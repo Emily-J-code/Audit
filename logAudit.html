@@ -46,9 +46,11 @@
 
         <!--MAIN-->
         <main>
+            <div id="bigDiv">
             <!--Audit 1, with 5 input fields that should be aligned so that 4 text inputs on left and 1 img input on right-->
             <!--Style so that the background is felt or textured. Replace "Audit 1" with Audit + var name that increases every time a new audit is made-->
-            <div class="tileBackground">
+            <div id="tileBackground">
+            <!--Original, not template-->
                 <h1>Audit 1</h1>
                 <div class="textInputs">
                     <div class = "surroundingDiv">
@@ -85,6 +87,48 @@
                     </div>
                     
                 </div>
+            <!--Template-->
+            </template>
+            <div id="tileBackground">
+                <template id="auditTemplates">
+                <h1>Audit 1</h1>
+                <div class="textInputs">
+                    <div class = "surroundingDiv">
+                    <p class = "prompt">Allergen: </p>
+                    <form>
+                        <!--learned that instead of name=, should be doing value= in order to use .value property-->
+                        <input type="text" id="allergenInput" placeholder="Type here...">
+                    </form>
+                    <p id="allergenReplacement" style= "visibility: hidden;" class = "textFields"> placeholderText</p>
+                    </div>
+                    
+                    <div class = "surroundingDiv">
+                    <p class = "prompt">Product Name: </p>
+                    <form>
+                        <input type="text" id="productInput" placeholder="Type here...">
+                    </form>
+                    <p id="productReplacement" style="visibility: hidden;" class = "textFields">  placeholderText</p>
+                    </div>
+
+                    <div class = "surroundingDiv">
+                    <p class = "prompt">Business/Restaurant Name: </p>
+                    <form>
+                        <input type="text" id="businessInput" placeholder="Type here...">
+                    </form>
+                    <p id="businessReplacement" style="visibility: hidden;" class = "textFields"> placeholderText</p>
+                    </div>
+
+                    <div class = "surroundingDiv">
+                    <p class = "prompt">Date of Audit: </p>
+                    <form>
+                        <input type="text" id="dateInput" placeholder="Type here...">
+                    </form>
+                    <p id="dateReplacement" style="visibility: hidden;" class = "textFields"> placeholderText</p>
+                    </div>
+                    
+                </div>
+            </template>
+            </div>
                 
                 <div class="imageInput">
                     <p>Take a pic of the product and upload it here: </p>
@@ -98,7 +142,7 @@
             <button class="deleteButton" type="button">DELETE</button>
             </div>
             
-            <!--<button class="newAuditButton" type="button">NEW AUDIT</button>-->
+            <button id="newAuditButton" type="button">NEW AUDIT</button>
         </main>            
     </body>   
 

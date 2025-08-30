@@ -74,7 +74,13 @@ li a:hover {
 
 /*creating log audit page*/
 /* logging an audit tyles */
-.tileBackground{
+#bigDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tileBackground{
     font-family: "Playwrite IT Moderna", cursive;
     background-color: palegoldenrod;
     display: flex;
@@ -90,7 +96,7 @@ li a:hover {
   padding: 20px;
 }
 
-.newAuditButton{
+#newAuditButton{
   font-family: "Playwrite IT Moderna", cursive;
   background-color: yellow;
   padding: 20px;
@@ -118,5 +124,5 @@ li a:hover {
 .textFields{
   color: blue;
   
-  
+
 }
