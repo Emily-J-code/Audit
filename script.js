@@ -12,7 +12,6 @@ var imgSource;
 // adding function so that a new audit will appear when button is clicked
 submitButton.addEventListener("click", finishAudit);
 function finishAudit(){
-    auditCount++;
     //getting allergen input and replacing it with the new value
     allergen = document.getElementById("allergenInput").value.toUpperCase();
     console.log(allergen);
@@ -46,11 +45,13 @@ function finishAudit(){
     document.getElementById("imageReplacement").source = imgSource;
     document.getElementById("imageReplacement").style.visibility = "visibility";
 }
+// for the templates
+function finishAuditDuplicate(){
 
+}
 // adding a function that undos the text  
 deleteButton.addEventListener("click", deleteAudit);
 function deleteAudit(){
-    auditCount--;
     //making the allergen input visible again and the text invisible
     allergen = "";
     document.getElementById("allergenInput").style.visibility = "visible";
@@ -71,11 +72,22 @@ function deleteAudit(){
 
 }
 
+// for the templates
+function deleteAuditDuplicate(){
+
+}
 newAuditButton.addEventListener("click", addAudit);
 //create a new audit by adding an identical template
 function addAudit(){
+    auditCount += 1;
     const auditTemplate = document.querySelector("#auditTemplates");
     const duplicateTemplate = auditTemplate.content.cloneNode(true);
+    duplicateTemplate.querySelector(".auditNumber").innerHTML = "Audit " + auditCount;
     document.getElementById("innerDiv").appendChild(duplicateTemplate);
+
+    submitButtonDuplicate.addEventListener("click", finishAudit);
+    deleteButtonDuplicate.addEventListener("click", deleteAudit);
+
+
 
 }

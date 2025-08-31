@@ -36,9 +36,7 @@
                     <li>
                     <a href="logAudit.html">LOG AUDIT</a>
                     </li>
-                    <li>
-                    <a href="notifications.html">RESTAURANT MAP</a>
-                    </li>
+                    
                     
                 </ul>
             </nav>
@@ -51,7 +49,7 @@
             <div id="tileBackground">
             <!--Original, not template-->
                 <div id="innerDiv">
-                <h1>Audit 1</h1>
+                <h1 class="auditNumber">Audit 1</h1>
                 <div class="textInputs">
                     <div class = "surroundingDiv">
                     <p class = "prompt">Allergen: </p>
@@ -101,39 +99,39 @@
             <!--Template-->
             </template>
                 <template id="auditTemplates">
-                <h1>Audit 1</h1>
+                <h1 class="auditNumber">Audit 1</h1>
                 <div class="textInputs">
                     <div class = "surroundingDiv">
                     <p class = "prompt">Allergen: </p>
                     <form>
                         <!--learned that instead of name=, should be doing value= in order to use .value property-->
-                        <input type="text" id="allergenInput" placeholder="Type here...">
+                        <input type="text" id="allergenInputDuplicate" placeholder="Type here...">
                     </form>
-                    <p id="allergenReplacement" style= "visibility: hidden;" class = "textFields"> placeholderText</p>
+                    <p id="allergenReplacementDuplicate" style= "visibility: hidden;" class = "textFields"> placeholderText</p>
                     </div>
                     
                     <div class = "surroundingDiv">
                     <p class = "prompt">Product Name: </p>
                     <form>
-                        <input type="text" id="productInput" placeholder="Type here...">
+                        <input type="text" id="productInputDuplicate" placeholder="Type here...">
                     </form>
-                    <p id="productReplacement" style="visibility: hidden;" class = "textFields">  placeholderText</p>
+                    <p id="productReplacementDuplicate" style="visibility: hidden;" class = "textFields">  placeholderText</p>
                     </div>
 
                     <div class = "surroundingDiv">
                     <p class = "prompt">Business/Restaurant Name: </p>
                     <form>
-                        <input type="text" id="businessInput" placeholder="Type here...">
+                        <input type="text" id="businessInputDuplicate" placeholder="Type here...">
                     </form>
-                    <p id="businessReplacement" style="visibility: hidden;" class = "textFields"> placeholderText</p>
+                    <p id="businessReplacementDuplicate" style="visibility: hidden;" class = "textFields"> placeholderText</p>
                     </div>
 
                     <div class = "surroundingDiv">
                     <p class = "prompt">Date of Audit: </p>
                     <form>
-                        <input type="text" id="dateInput" placeholder="Type here...">
+                        <input type="text" id="dateInputDuplicate" placeholder="Type here...">
                     </form>
-                    <p id="dateReplacement" style="visibility: hidden;" class = "textFields"> placeholderText</p>
+                    <p id="dateReplacementDuplicate" style="visibility: hidden;" class = "textFields"> placeholderText</p>
                     </div>
                     
         
@@ -146,8 +144,8 @@
                     </form>
                 </div>
 
-            <button class="submitButton" type="submit">DONE</button>
-            <button class="deleteButton" type="button">DELETE</button>
+            <button class="submitButtonDuplicate" type="submit">DONE</button>
+            <button class="deleteButtonDuplicate" type="button">DELETE</button>
             </template>
             </div>
             </div>
