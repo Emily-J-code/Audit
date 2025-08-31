@@ -48,11 +48,15 @@ function finishAudit(){
 // for the templates
 function finishAuditDuplicate(){
     //getting allergen input and replacing it with the new value
-    allergen = duplicateTemplate.querySelector(".allergenInputDuplicate").value.toUpperCase();
-    console.log(allergen);
-    duplicateTemplate.querySelector(".allergenInputDuplicate").style.visibility = "hidden";
-    duplicateTemplate.querySelector(".allergenReplacementDuplicate").innerHTML = allergen;
-    duplicateTemplate.querySelector(".allergenReplacementDuplicate").style.visibility = "visible";
+    const allergenInput = container.querySelector(".allergenInputDuplicate");
+    const allergenReplacement = container.querySelector(".allergenReplacementDuplicate");
+    allergenInput.style.visibility = "hidden";
+    allergenReplacement.innerHTML = allergenInput.value.toUpperCase();
+    allergenReplacement.style.visibility = "visible";
+    //allergen = duplicateTemplate.querySelector(".allergenInputDuplicate").value.toUpperCase();
+    //duplicateTemplate.querySelector(".allergenInputDuplicate").style.visibility = "hidden";
+    //duplicateTemplate.querySelector(".allergenReplacementDuplicate").innerHTML = allergen;
+    //duplicateTemplate.querySelector(".allergenReplacementDuplicate").style.visibility = "visible";
 
     //doing same thing with the product input and text
     product = duplicateTemplate.querySelector(".productInputDuplicate").value.toUpperCase();
