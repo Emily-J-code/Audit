@@ -47,7 +47,38 @@ function finishAudit(){
 }
 // for the templates
 function finishAuditDuplicate(){
+    //getting allergen input and replacing it with the new value
+    allergen = duplicateTemplate.querySelector(".allergenInputDuplicate").value.toUpperCase();
+    console.log(allergen);
+    duplicateTemplate.querySelector(".allergenInputDuplicate").style.visibility = "hidden";
+    duplicateTemplate.querySelector(".allergenReplacementDuplicate").innerHTML = allergen;
+    duplicateTemplate.querySelector(".allergenReplacementDuplicate").style.visibility = "visible";
 
+    //doing same thing with the product input and text
+    product = duplicateTemplate.querySelector(".productInputDuplicate").value.toUpperCase();
+    console.log(product);
+    duplicateTemplate.querySelector(".productInputDuplicate").style.visibility = "hidden";
+    duplicateTemplate.querySelector(".productReplacementDuplicate").innerHTML = product;
+    duplicateTemplate.querySelector(".productReplacementDuplicate").style.visibility = "visible";
+
+    //"" business
+    business = duplicateTemplate.querySelector(".businessInputDuplicate").value.toUpperCase();
+    console.log(business);
+    duplicateTemplate.querySelector(".businessInputDuplicate").style.visibility = "hidden";
+    duplicateTemplate.querySelector(".businessReplacementDuplicate").innerHTML = product;
+    duplicateTemplate.querySelector(".businessReplacementDuplicate").style.visibility = "visible";
+
+    //"" date
+    date = duplicateTemplate.querySelector(".dateInputDuplicate").value.toUpperCase();
+    console.log(date);
+    duplicateTemplate.querySelector(".dateInputDuplicate").style.visibility = "hidden";
+    duplicateTemplate.querySelector(".dateReplacementDuplicate").innerHTML = date;
+    duplicateTemplate.querySelector(".dateReplacementDuplicate").style.visibility = "visible";
+
+    imgSource = duplicateTemplate.querySelector(".productImgDuplicate").source;
+    duplicateTemplate.querySelector(".productImgDuplicate").style.visibility = "hidden";
+    duplicateTemplate.querySelector(".imageReplacementDuplicate").source = imgSource;
+    duplicateTemplate.querySelector(".imageReplacementDuplicate").style.visibility = "visibility"    
 }
 // adding a function that undos the text  
 deleteButton.addEventListener("click", deleteAudit);
@@ -69,11 +100,26 @@ function deleteAudit(){
     document.getElementById("dateInput").style.visibility = "visible";
     document.getElementById("dateReplacement").style.visibility = "hidden";
 
-
 }
 
 // for the templates
 function deleteAuditDuplicate(){
+//making the allergen input visible again and the text invisible
+    allergen = "";
+    duplicateTemplate.querySelector(".allergenInputDuplicate").style.visibility = "visible";
+    duplicateTemplate.querySelector(".allergenReplacementDuplicate").style.visibility = "hidden";
+    //making product input visible
+    product = "";
+    duplicateTemplate.querySelector(".productInputDuplicate").style.visibility = "visible";
+    duplicateTemplate.querySelector(".productReplacementDuplicate").style.visibility = "hidden";
+    //making business input visible
+    business = "";
+    duplicateTemplate.querySelector(".businessInputDuplicate").style.visibility = "visible";
+    duplicateTemplate.querySelector(".businessReplacementDuplicate").style.visibility = "hidden";
+    // making date input visible
+    date = "";
+    duplicateTemplate.querySelector(".dateInputDuplicate").style.visibility = "visible";
+    duplicateTemplate.querySelector(".dateReplacementDuplicate").style.visibility = "hidden";
 
 }
 newAuditButton.addEventListener("click", addAudit);
@@ -85,8 +131,11 @@ function addAudit(){
     duplicateTemplate.querySelector(".auditNumber").innerHTML = "Audit " + auditCount;
     document.getElementById("innerDiv").appendChild(duplicateTemplate);
 
-    submitButtonDuplicate.addEventListener("click", finishAudit);
-    deleteButtonDuplicate.addEventListener("click", deleteAudit);
+    const submitButtonDuplicate = duplicateTemplate.querySelector(".submitButtonDuplicate");
+    const deleteButtonDuplicate = duplicateTemplate.querySelector(".deleteButtonDuplicate");
+
+    submitButtonDuplicate.addEventListener("click", finishAuditDuplicate);
+    deleteButtonDuplicate.addEventListener("click", deleteAuditDuplicate);
 
 
 
