@@ -1,12 +1,6 @@
 const submitButton = document.querySelector(".submitButton");
 const deleteButton = document.querySelector(".deleteButton");
 const newAuditButton = document.querySelector("#newAuditButton")
-var allergen = "";
-var product = "";
-var business = "";
-var date = "";
-var auditCount = 1;
-var imgSource;
 
 
 // adding function so that a new audit will appear when button is clicked
@@ -153,11 +147,12 @@ function addAudit(){
         //duplicateTemplate.querySelector(".allergenReplacementDuplicate").style.visibility = "visible";
 
         //doing same thing with the product input and text
-        product = container.querySelector(".productInputDuplicate").value.toUpperCase();
+        const product = container.querySelector(".productInputDuplicate");
+        const productReplacement = container.querySelector(".productReplacementDuplicate");
         console.log(product);
-        container.querySelector(".productInputDuplicate").style.visibility = "hidden";
-        container.querySelector(".productReplacementDuplicate").innerHTML = product;
-        container.querySelector(".productReplacementDuplicate").style.visibility = "visible";
+        product.style.visibility = "hidden";
+        productReplacement.innerHTML = product.value.toUpperCase();;
+        productReplacement.style.visibility = "visible";
 
         //"" business
         business = container.querySelector(".businessInputDuplicate").value.toUpperCase();
@@ -181,7 +176,7 @@ function addAudit(){
     });
     deleteButtonDuplicate.addEventListener("click", function(){
             allergen = "";
-        const container = this.closest()
+        const container = this.closest(".textInputs");
         container.querySelector(".allergenInputDuplicate").style.visibility = "visible";
         container.querySelector(".allergenReplacementDuplicate").style.visibility = "hidden";
         //making product input visible
